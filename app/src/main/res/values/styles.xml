@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="textView">
+        <item name="android:padding">@dimen/paddingTextView</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+</resources>

@@ -6,9 +6,9 @@ class MainPresenter(private val view: MainContract.View): MainContract.Presenter
     init {
         view.onClickButton { onClickButtonShow(view.getInputMessage()) }
     }
-    override fun onClickButtonShow(text: String) {
-        if (text.isBlank()) view.showErrorToast()
-        else view.showToast(text)
+    override fun onClickButtonShow(name: String) {
+        if (name.isBlank()) view.showErrorToast()
+        else view.showToast(name)
     }
 
 

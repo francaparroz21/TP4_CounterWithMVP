@@ -13,8 +13,8 @@ class MainView(act: Activity) : ActivityView(act), MainContract.View {
         act.setContentView(binding.root)
     }
 
-    override fun showToast(toast: String) {
-        Toast.makeText(context, toast, Toast.LENGTH_SHORT).show()
+    override fun showToast(name: String) {
+        Toast.makeText(context, "Hello $name!", Toast.LENGTH_SHORT).show()
     }
 
     override fun getInputMessage(): String {
