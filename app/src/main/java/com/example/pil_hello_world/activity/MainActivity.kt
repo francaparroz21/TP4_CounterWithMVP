@@ -12,11 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var presenter: MainContract.Presenter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        presenter = MainPresenter(MainView(this))
-        binding.buttonShowText.setOnClickListener {
-            presenter.onClickButtonShow(binding.insertText.text.toString())
-        }
+        MainPresenter(MainView(this))
     }
 }
+
