@@ -14,7 +14,11 @@ class MainView(act: Activity) : ActivityView(act), MainContract.View {
     }
 
     override fun showToast(name: String) {
-        Toast.makeText(context, "Hello $name!", Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            context,
+            "${act?.getString(R.string.helloToast)} $name${act?.getString(R.string.exclamation)}",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     override fun getInputMessage(): String {
@@ -28,7 +32,7 @@ class MainView(act: Activity) : ActivityView(act), MainContract.View {
     override fun showErrorToast() {
         Toast.makeText(
             act,
-            act!!.resources.getString(R.string.errorToastMessage),
+            act?.resources?.getString(R.string.errorToastMessage),
             Toast.LENGTH_SHORT
         ).show()
     }

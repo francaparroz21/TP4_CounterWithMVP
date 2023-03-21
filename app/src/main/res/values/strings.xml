@@ -1,5 +1,7 @@
 <resources>
     <string name="appName">TP Hello World!!</string>
+    <string name="exclamation">!</string>
+    <string name="helloToast">Hello</string>
     <string name="title">Hello World</string>
     <string name="insertText">Enter your name</string>
     <string name="buttonShowText">Show</string>

@@ -26,4 +26,10 @@ class MainPresenterTest {
         presenter.onClickButtonShow("hello world")
         verify { view.showToast("hello world") }
     }
+
+    @Test
+    fun `we verify that when an empty text is entered we will get the error message`(){
+        presenter.onClickButtonShow("             ")
+        verify { view.showErrorToast() }
+    }
 }
