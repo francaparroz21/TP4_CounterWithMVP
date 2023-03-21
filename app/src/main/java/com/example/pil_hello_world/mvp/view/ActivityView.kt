@@ -4,13 +4,13 @@ import android.app.Activity
 import android.content.Context
 import java.lang.ref.WeakReference
 
-open class ActivityView(act: Activity) {
-    private val actRef: WeakReference<Activity> = WeakReference(act)
+open class ActivityView(activity: Activity) {
+    private val activityRef: WeakReference<Activity> = WeakReference(activity)
 
-    val act: Activity?
-        get() = actRef.get()
+    val activity: Activity?
+        get() = activityRef.get()
 
     val context: Context?
-        get() = act
+        get() = activity
 
 }

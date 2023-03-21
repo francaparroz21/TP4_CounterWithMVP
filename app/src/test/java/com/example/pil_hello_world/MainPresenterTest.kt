@@ -24,12 +24,12 @@ class MainPresenterTest {
     @Test
     fun `we verify that when you press the presenter button it show up in view`(){
         presenter.onClickButtonShow("hello world")
-        verify { view.showToast("hello world") }
+        verify { view.showGreetingToast("hello world") }
     }
 
     @Test
     fun `we verify that when an empty text is entered we will get the error message`(){
         presenter.onClickButtonShow("             ")
-        verify { view.showErrorToast() }
+        verify { view.showEmptyMessageErrorToast() }
     }
 }

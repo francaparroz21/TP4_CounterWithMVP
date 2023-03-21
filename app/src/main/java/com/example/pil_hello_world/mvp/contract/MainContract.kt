@@ -2,10 +2,10 @@ package com.example.pil_hello_world.mvp.contract
 
 interface MainContract {
     interface View {
-        fun showToast(name: String)
+        fun showGreetingToast(name: String)
         fun getInputMessage(): String
         fun onClickButton(function: ()-> Unit)
-        fun showErrorToast()
+        fun showEmptyMessageErrorToast()
     }
 
     interface Presenter {

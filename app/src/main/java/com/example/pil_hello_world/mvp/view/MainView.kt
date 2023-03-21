@@ -6,17 +6,17 @@ import com.example.pil_hello_world.R
 import com.example.pil_hello_world.databinding.ActivityMainBinding
 import com.example.pil_hello_world.mvp.contract.MainContract
 
-class MainView(act: Activity) : ActivityView(act), MainContract.View {
-    private var binding: ActivityMainBinding = ActivityMainBinding.inflate(act.layoutInflater)
+class MainView(activity: Activity) : ActivityView(activity), MainContract.View {
+    private var binding: ActivityMainBinding = ActivityMainBinding.inflate(activity.layoutInflater)
 
     init {
-        act.setContentView(binding.root)
+        activity.setContentView(binding.root)
     }
 
-    override fun showToast(name: String) {
+    override fun showGreetingToast(name: String) {
         Toast.makeText(
             context,
-            "${act?.getString(R.string.helloToast)} $name${act?.getString(R.string.exclamation)}",
+            "${activity?.getString(R.string.helloToast)} $name${activity?.getString(R.string.exclamation)}",
             Toast.LENGTH_SHORT
         ).show()
     }
@@ -29,10 +29,10 @@ class MainView(act: Activity) : ActivityView(act), MainContract.View {
         binding.buttonShowText.setOnClickListener { function() }
     }
 
-    override fun showErrorToast() {
+    override fun showEmptyMessageErrorToast() {
         Toast.makeText(
-            act,
-            act?.resources?.getString(R.string.errorToastMessage),
+            activity,
+            activity?.resources?.getString(R.string.errorToastMessage),
             Toast.LENGTH_SHORT
         ).show()
     }
