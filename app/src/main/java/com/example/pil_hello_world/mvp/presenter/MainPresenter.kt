@@ -11,5 +11,13 @@ class MainPresenter(private val view: MainContract.View): MainContract.Presenter
         else view.showGreetingToast(name)
     }
 
+    override fun onClickIncreaseButton() {
+        TODO("Not yet implemented")
+    }
+
+    override fun onClickDecreaseButton() {
+        TODO("Not yet implemented")
+    }
+
 
 }

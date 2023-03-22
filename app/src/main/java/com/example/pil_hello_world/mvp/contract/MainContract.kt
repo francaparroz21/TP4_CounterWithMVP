@@ -10,5 +10,7 @@ interface MainContract {
 
     interface Presenter {
         fun onClickButtonShow(name: String)
+        fun onClickIncreaseButton()
+        fun onClickDecreaseButton()
     }
 }
