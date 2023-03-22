@@ -13,27 +13,21 @@ class MainView(activity: Activity) : ActivityView(activity), MainContract.View {
         activity.setContentView(binding.root)
     }
 
-    override fun showGreetingToast(name: String) {
-        Toast.makeText(
-            context,
-            "${activity?.getString(R.string.helloToast)} $name${activity?.getString(R.string.exclamation)}",
-            Toast.LENGTH_SHORT
-        ).show()
+    override fun setCount() {
+        TODO("Not yet implemented")
     }
 
-    override fun getInputMessage(): String {
-        return binding.insertText.text.toString()
+    override fun onClickIncreaseButton() {
+        TODO("Not yet implemented")
     }
 
-    override fun onClickButton(function: () -> Unit) {
-        binding.buttonShowText.setOnClickListener { function() }
+    override fun onClickDecreaseButton() {
+        TODO("Not yet implemented")
     }
 
-    override fun showEmptyMessageErrorToast() {
-        Toast.makeText(
-            activity,
-            activity?.resources?.getString(R.string.errorToastMessage),
-            Toast.LENGTH_SHORT
-        ).show()
+    override fun onClickResetButton() {
+        TODO("Not yet implemented")
     }
+
+
 }

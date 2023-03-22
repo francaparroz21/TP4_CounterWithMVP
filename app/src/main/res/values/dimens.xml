@@ -2,4 +2,5 @@
 <resources>
     <dimen name="marginButton">24dp</dimen>
     <dimen name="paddingTextView">30sp</dimen>
+    <dimen name="widthButton">10sp</dimen>
 </resources>

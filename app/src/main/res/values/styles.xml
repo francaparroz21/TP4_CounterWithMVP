@@ -4,4 +4,8 @@
         <item name="android:padding">@dimen/paddingTextView</item>
         <item name="android:textColor">@color/red</item>
     </style>
+
+    <style name="countButtons">
+        <item name="android:layout_width">@dimen/widthButton</item>
+    </style>
 </resources>
