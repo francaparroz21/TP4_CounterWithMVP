@@ -17,6 +17,7 @@ interface MainContract {
 
     interface Presenter {
         fun onClickIncreaseButton()
-        fun onClickDecreaseButton(count: String)
+        fun onClickDecreaseButton()
+        fun onClickResetButton()
     }
 }

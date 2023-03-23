@@ -13,20 +13,20 @@ class MainView(activity: Activity) : ActivityView(activity), MainContract.View {
         activity.setContentView(binding.root)
     }
 
-    override fun setCount() {
-        TODO("Not yet implemented")
+    override fun setCount(count: String) {
+        binding.count.text = count
     }
 
-    override fun onClickIncreaseButton() {
-        TODO("Not yet implemented")
+    override fun onClickIncreaseButton(function: () -> Unit) {
+        binding.increaseButton.setOnClickListener { (function()) }
     }
 
-    override fun onClickDecreaseButton() {
-        TODO("Not yet implemented")
+    override fun onClickDecreaseButton(function: () -> Unit) {
+        binding.decreaseButton.setOnClickListener { (function()) }
     }
 
-    override fun onClickResetButton() {
-        TODO("Not yet implemented")
+    override fun onClickResetButton(function: () -> Unit) {
+        binding.resetButton.setOnClickListener { (function()) }
     }
 
 
