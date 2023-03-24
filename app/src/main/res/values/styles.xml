@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="textView">
+    <style name="titleApp">
         <item name="android:padding">@dimen/paddingTextView</item>
         <item name="android:textColor">@color/red</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    
+    <style name="count">
+        <item name="android:textSize">@dimen/fontSizeCount</item>
     </style>
 
     <style name="countButtons">

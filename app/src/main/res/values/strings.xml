@@ -9,7 +9,7 @@
     <string name="decreaseButton">Decrease</string>
     <string name="increaseButton">Increase</string>
     <string name="resetButton">Reset</string>
-    <string name="countText">TP3 COUNT</string>
+    <string name="countText">TP3 COUNT MVP</string>
     <string name="inputCountText">Enter a number</string>
     <string name="startValueCount">0</string>
 </resources>

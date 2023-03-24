@@ -3,8 +3,8 @@ package com.example.pil_hello_world.mvp.contract
 interface MainContract {
     interface Model {
         fun getCount(): String
-        fun increase()
-        fun decrease()
+        fun increase(acc: Int)
+        fun decrease(acc: Int)
         fun reset()
     }
 
@@ -13,6 +13,7 @@ interface MainContract {
         fun onClickIncreaseButton(function: () -> Unit)
         fun onClickDecreaseButton(function: () -> Unit)
         fun onClickResetButton(function: () -> Unit)
+        fun getInsertCounter(): Int
     }
 
     interface Presenter {

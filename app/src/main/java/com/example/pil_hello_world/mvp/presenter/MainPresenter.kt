@@ -7,15 +7,16 @@ class MainPresenter(private val model: MainContract.Model, private val view: Mai
     init {
         view.onClickIncreaseButton { onClickIncreaseButton() }
         view.onClickDecreaseButton { onClickDecreaseButton() }
+        view.onClickResetButton { onClickResetButton() }
     }
 
     override fun onClickIncreaseButton() {
-        model.increase()
+        model.increase(view.getInsertCounter())
         view.setCount(model.getCount())
     }
 
     override fun onClickDecreaseButton() {
-        model.decrease()
+        model.decrease(view.getInsertCounter())
         view.setCount(model.getCount())
     }
 

@@ -29,5 +29,8 @@ class MainView(activity: Activity) : ActivityView(activity), MainContract.View {
         binding.resetButton.setOnClickListener { (function()) }
     }
 
+    override fun getInsertCounter(): Int {
+        return binding.insertText.text.toString().toInt()
+    }
 
 }

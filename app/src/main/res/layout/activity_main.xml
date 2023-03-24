@@ -8,13 +8,13 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/countText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/textView"
+        style="@style/titleApp"
         />
 
     <TextView
@@ -25,7 +25,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintBottom_toTopOf="@id/insertText"/>
+        app:layout_constraintBottom_toTopOf="@id/insertText"
+        style="@style/count"/>
 
     <EditText
         android:id="@+id/insertText"
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/inputCountText"
         android:minHeight="@dimen/insertTextHeight"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +48,6 @@
         android:text="@string/decreaseButton"
         style="@style/countButtons"
         app:layout_constraintEnd_toEndOf="@id/increaseButton"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/increaseButton" />
 
     <Button
@@ -54,9 +55,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/marginButton"
+        android:layout_marginTop="8dp"
         android:text="@string/increaseButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/decreaseButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/decreaseButton"
         app:layout_constraintTop_toBottomOf="@id/insertText" />
 
     <Button

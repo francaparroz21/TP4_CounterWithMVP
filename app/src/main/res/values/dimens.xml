@@ -4,4 +4,6 @@
     <dimen name="paddingTextView">30sp</dimen>
     <dimen name="widthButton">10sp</dimen>
     <dimen name="insertTextHeight">48sp</dimen>
+    <dimen name="fontSizeCount">50dp</dimen>
+    <dimen name="elevationTittle">2dp</dimen>
 </resources>
