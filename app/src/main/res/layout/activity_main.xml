@@ -33,32 +33,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/inputCountText"
-        android:minHeight="@dimen/insertTextHeight"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:minHeight="@dimen/insertTextHeight"
+        app:layout_constraintBottom_toTopOf="@id/decreaseButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/count" />
 
     <Button
         android:id="@+id/decreaseButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/marginButton"
-        android:text="@string/decreaseButton"
         style="@style/countButtons"
-        app:layout_constraintEnd_toEndOf="@id/increaseButton"
-        app:layout_constraintTop_toBottomOf="@id/increaseButton" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/resetButton"
+        app:layout_constraintTop_toBottomOf="@+id/insertText" />
 
     <Button
         android:id="@+id/increaseButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/marginButton"
         android:text="@string/increaseButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/resetButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/decreaseButton"
-        app:layout_constraintTop_toBottomOf="@id/insertText" />
+        app:layout_constraintTop_toBottomOf="@+id/insertText" />
 
     <Button
         android:id="@+id/resetButton"
@@ -66,9 +67,10 @@
         android:layout_height="wrap_content"
         android:text="@string/resetButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/decreaseButton" />
+        app:layout_constraintEnd_toStartOf="@id/decreaseButton"
+        app:layout_constraintTop_toBottomOf="@+id/insertText"
+        app:layout_constraintStart_toEndOf="@id/increaseButton"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
