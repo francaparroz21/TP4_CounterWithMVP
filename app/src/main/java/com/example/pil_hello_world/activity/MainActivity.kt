@@ -9,7 +9,7 @@ import com.example.pil_hello_world.mvp.view.MainView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        MainPresenter(CountModel(),MainView(this))
+        MainPresenter(CountModel(), MainView(this))
     }
 }
 

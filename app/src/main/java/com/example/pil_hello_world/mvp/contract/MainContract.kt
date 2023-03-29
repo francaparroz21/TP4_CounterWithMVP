@@ -14,6 +14,8 @@ interface MainContract {
         fun onClickDecreaseButton(function: () -> Unit)
         fun onClickResetButton(function: () -> Unit)
         fun getInsertCounter(): Int
+        fun valueIsEmpty(): Boolean
+        fun showToastErrorEmptyMessage()
     }
 
     interface Presenter {

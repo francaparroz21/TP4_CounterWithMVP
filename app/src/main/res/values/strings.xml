@@ -5,7 +5,7 @@
     <string name="title">Hello World</string>
     <string name="insertText">Enter your name</string>
     <string name="buttonShowText">Show</string>
-    <string name="errorToastMessage">Error. Text is empty</string>
+    <string name="errorToastMessage">Error. Number is empty</string>
     <string name="decreaseButton">Decrease</string>
     <string name="increaseButton">Increase</string>
     <string name="resetButton">Reset</string>

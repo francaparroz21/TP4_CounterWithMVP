@@ -33,4 +33,13 @@ class MainView(activity: Activity) : ActivityView(activity), MainContract.View {
         return binding.insertText.text.toString().toInt()
     }
 
+    override fun valueIsEmpty(): Boolean {
+        return binding.insertText.text.isBlank()
+    }
+
+    override fun showToastErrorEmptyMessage() {
+        Toast.makeText(context, activity?.getString(R.string.errorToastMessage), Toast.LENGTH_SHORT)
+            .show()
+    }
+
 }

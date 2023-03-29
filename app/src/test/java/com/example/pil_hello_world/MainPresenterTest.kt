@@ -1,8 +1,11 @@
 package com.example.pil_hello_world
 
 import com.example.pil_hello_world.mvp.contract.MainContract
+import com.example.pil_hello_world.mvp.model.CountModel
 import com.example.pil_hello_world.mvp.presenter.MainPresenter
+import io.mockk.InternalPlatformDsl.toStr
 import io.mockk.MockKAnnotations
+import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.verify
 import org.junit.Before
@@ -10,26 +13,53 @@ import org.junit.Test
 
 class MainPresenterTest {
 
-    private lateinit var presenter: MainContract.Presenter
-
     @MockK
     private lateinit var view: MainContract.View
 
+    private lateinit var presenter: MainContract.Presenter
+
+
     @Before
-    fun setup(){
+    fun setup() {
         MockKAnnotations.init(this, relaxed = true)
-        presenter = MainPresenter(view)
+        presenter = MainPresenter(CountModel(), view)
     }
 
     @Test
-    fun `we verify that when you press the presenter button it show up in view`(){
-        presenter.onClickButtonShow("hello world")
-        verify { view.showGreetingToast("hello world") }
+    fun `we verify that when you press the increase button the counter it changes in the view`() {
+        every { view.getInsertCounter() } returns 20
+        every { view.valueIsEmpty() } returns false
+        presenter.onClickIncreaseButton()
+        verify { view.setCount("20")}
     }
 
     @Test
-    fun `we verify that when an empty text is entered we will get the error message`(){
-        presenter.onClickButtonShow("             ")
-        verify { view.showEmptyMessageErrorToast() }
+    fun `we verify that when you press the decrease button the counter it changes`() {
+        every { view.valueIsEmpty() } returns false
+        every { view.getInsertCounter() } returns -20
+        presenter.onClickDecreaseButton()
+        verify { view.setCount("20")}
     }
+
+    @Test
+    fun `if the input value is empty, throw an toast error message when the increase button is pressed`() {
+        every { view.valueIsEmpty() } returns true
+        presenter.onClickIncreaseButton()
+        verify { view.showToastErrorEmptyMessage() }
+    }
+
+    @Test
+    fun `if the input value is empty, throw an toast error message when the decrease button is pressed`() {
+        every { view.valueIsEmpty() } returns true
+        presenter.onClickDecreaseButton()
+        verify { view.showToastErrorEmptyMessage() }
+    }
+
+    @Test
+    fun `we verify that when you press the reset button, the counter changes to zero`() {
+        presenter.onClickResetButton()
+        verify { view.setCount("0") }
+    }
+
+
 }
