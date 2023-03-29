@@ -1,5 +1,5 @@
 <resources>
-    <string name="appName">TP Hello World!!</string>
+    <string name="appName">TP4: Counter with MVP</string>
     <string name="exclamation">!</string>
     <string name="helloToast">Hello</string>
     <string name="title">Hello World</string>
@@ -9,7 +9,7 @@
     <string name="decreaseButton">Decrease</string>
     <string name="increaseButton">Increase</string>
     <string name="resetButton">Reset</string>
-    <string name="countText">TP3 COUNT MVP</string>
+    <string name="countText">COUNT MVP</string>
     <string name="inputCountText">Enter a number</string>
     <string name="startValueCount">0</string>
 </resources>
