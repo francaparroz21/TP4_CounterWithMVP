@@ -1,4 +1,4 @@
-package com.example.pil_hello_world
+package com.example.TP4_CountMVP
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,7 +1,6 @@
-package com.example.pil_hello_world.mvp.presenter
+package com.example.TP4_CountMVP.mvp.presenter
 
-import android.widget.Toast
-import com.example.pil_hello_world.mvp.contract.MainContract
+import com.example.TP4_CountMVP.mvp.contract.MainContract
 
 class MainPresenter(private val model: MainContract.Model, private val view: MainContract.View) :
     MainContract.Presenter {

@@ -1,6 +1,6 @@
-package com.example.pil_hello_world.mvp.model
+package com.example.TP4_CountMVP.mvp.model
 
-import com.example.pil_hello_world.mvp.contract.MainContract
+import com.example.TP4_CountMVP.mvp.contract.MainContract
 
 class CountModel() : MainContract.Model {
     private var count = 0

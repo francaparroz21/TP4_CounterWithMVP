@@ -1,9 +1,8 @@
-package com.example.pil_hello_world
+package com.example.TP4_CountMVP
 
-import com.example.pil_hello_world.mvp.contract.MainContract
-import com.example.pil_hello_world.mvp.model.CountModel
-import com.example.pil_hello_world.mvp.presenter.MainPresenter
-import io.mockk.InternalPlatformDsl.toStr
+import com.example.TP4_CountMVP.mvp.contract.MainContract
+import com.example.TP4_CountMVP.mvp.model.CountModel
+import com.example.TP4_CountMVP.mvp.presenter.MainPresenter
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
@@ -17,7 +16,6 @@ class MainPresenterTest {
     private lateinit var view: MainContract.View
 
     private lateinit var presenter: MainContract.Presenter
-
 
     @Before
     fun setup() {

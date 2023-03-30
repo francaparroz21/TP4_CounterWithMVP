@@ -1,4 +1,4 @@
-package com.example.pil_hello_world.mvp.contract
+package com.example.TP4_CountMVP.mvp.contract
 
 interface MainContract {
     interface Model {
