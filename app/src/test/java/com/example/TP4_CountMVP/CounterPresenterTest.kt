@@ -1,8 +1,7 @@
 package com.example.TP4_CountMVP
-
-import com.example.TP4_CountMVP.mvp.contract.MainContract
-import com.example.TP4_CountMVP.mvp.model.CountModel
-import com.example.TP4_CountMVP.mvp.presenter.MainPresenter
+import com.example.TP4_CountMVP.mvp.CounterModel
+import com.example.TP4_CountMVP.mvp.contract.CounterContract
+import com.example.TP4_CountMVP.mvp.presenter.CounterPresenter
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
@@ -10,17 +9,17 @@ import io.mockk.verify
 import org.junit.Before
 import org.junit.Test
 
-class MainPresenterTest {
+class CounterPresenterTest {
 
     @MockK
-    private lateinit var view: MainContract.View
+    private lateinit var view: CounterContract.View
 
-    private lateinit var presenter: MainContract.Presenter
+    private lateinit var presenter: CounterContract.Presenter
 
     @Before
     fun setup() {
         MockKAnnotations.init(this, relaxed = true)
-        presenter = MainPresenter(CountModel(), view)
+        presenter = CounterPresenter(CounterModel(), view)
     }
 
     @Test

@@ -1,8 +1,7 @@
-package com.example.TP4_CountMVP.mvp.model
+package com.example.TP4_CountMVP.mvp
+import com.example.TP4_CountMVP.mvp.contract.CounterContract
 
-import com.example.TP4_CountMVP.mvp.contract.MainContract
-
-class CountModel() : MainContract.Model {
+class CounterModel() : CounterContract.Model {
     private var count = 0
     override fun getCount(): String = count.toString()
     override fun increase(acc: Int) {

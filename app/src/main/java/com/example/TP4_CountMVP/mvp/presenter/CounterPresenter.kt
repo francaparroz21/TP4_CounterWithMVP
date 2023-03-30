@@ -1,9 +1,9 @@
 package com.example.TP4_CountMVP.mvp.presenter
 
-import com.example.TP4_CountMVP.mvp.contract.MainContract
+import com.example.TP4_CountMVP.mvp.contract.CounterContract
 
-class MainPresenter(private val model: MainContract.Model, private val view: MainContract.View) :
-    MainContract.Presenter {
+class CounterPresenter(private val model: CounterContract.Model, private val view: CounterContract.View) :
+    CounterContract.Presenter {
     init {
         view.onClickIncreaseButton { onClickIncreaseButton() }
         view.onClickDecreaseButton { onClickDecreaseButton() }

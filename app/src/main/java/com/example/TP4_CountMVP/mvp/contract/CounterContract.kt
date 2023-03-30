@@ -1,6 +1,6 @@
 package com.example.TP4_CountMVP.mvp.contract
 
-interface MainContract {
+interface CounterContract {
     interface Model {
         fun getCount(): String
         fun increase(acc: Int)

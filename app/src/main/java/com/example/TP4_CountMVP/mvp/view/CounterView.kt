@@ -2,11 +2,11 @@ package com.example.TP4_CountMVP.mvp.view
 
 import android.app.Activity
 import android.widget.Toast
-import com.example.TP4_CountMVP.R
-import com.example.TP4_CountMVP.databinding.ActivityMainBinding
-import com.example.TP4_CountMVP.mvp.contract.MainContract
+import com.example.TP4_CountMVP.mvp.contract.CounterContract
+import com.example.pil_hello_world.R
+import com.example.pil_hello_world.databinding.ActivityMainBinding
 
-class MainView(activity: Activity) : ActivityView(activity), MainContract.View {
+class CounterView(activity: Activity) : ActivityView(activity), CounterContract.View {
     private var binding: ActivityMainBinding = ActivityMainBinding.inflate(activity.layoutInflater)
 
     init {
