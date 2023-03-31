@@ -16,6 +16,8 @@ interface CounterContract {
         fun getInsertCounter(): Int
         fun valueIsEmpty(): Boolean
         fun showToastErrorEmptyMessage()
+        fun showToastAlreadyResetPressed()
+        fun getCounterInView(): Int
     }
 
     interface Presenter {

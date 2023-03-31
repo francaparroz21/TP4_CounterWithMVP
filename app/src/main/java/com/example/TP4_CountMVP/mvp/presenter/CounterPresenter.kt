@@ -2,7 +2,10 @@ package com.example.TP4_CountMVP.mvp.presenter
 
 import com.example.TP4_CountMVP.mvp.contract.CounterContract
 
-class CounterPresenter(private val model: CounterContract.Model, private val view: CounterContract.View) :
+class CounterPresenter(
+    private val model: CounterContract.Model,
+    private val view: CounterContract.View
+) :
     CounterContract.Presenter {
     init {
         view.onClickIncreaseButton { onClickIncreaseButton() }
@@ -13,7 +16,7 @@ class CounterPresenter(private val model: CounterContract.Model, private val vie
     override fun onClickIncreaseButton() {
         if (view.valueIsEmpty()) {
             view.showToastErrorEmptyMessage()
-        }else{
+        } else {
             model.increase(view.getInsertCounter())
             view.setCount(model.getCount())
         }
@@ -22,15 +25,18 @@ class CounterPresenter(private val model: CounterContract.Model, private val vie
     override fun onClickDecreaseButton() {
         if (view.valueIsEmpty()) {
             view.showToastErrorEmptyMessage()
-        }else{
+        } else {
             model.decrease(view.getInsertCounter())
             view.setCount(model.getCount())
         }
     }
 
     override fun onClickResetButton() {
-        model.reset()
-        view.setCount(model.getCount())
+        if (view.getCounterInView() == 0) view.showToastAlreadyResetPressed()
+        else {
+            model.reset()
+            view.setCount(model.getCount())
+        }
     }
 
 

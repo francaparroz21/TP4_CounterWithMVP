@@ -27,7 +27,7 @@ class CounterPresenterTest {
         every { view.getInsertCounter() } returns 20
         every { view.valueIsEmpty() } returns false
         presenter.onClickIncreaseButton()
-        verify { view.setCount("20")}
+        verify { view.setCount("20") }
     }
 
     @Test
@@ -35,7 +35,7 @@ class CounterPresenterTest {
         every { view.valueIsEmpty() } returns false
         every { view.getInsertCounter() } returns -20
         presenter.onClickDecreaseButton()
-        verify { view.setCount("20")}
+        verify { view.setCount("20") }
     }
 
     @Test
@@ -54,8 +54,16 @@ class CounterPresenterTest {
 
     @Test
     fun `we verify that when you press the reset button, the counter changes to zero`() {
+        every { view.getCounterInView() } returns 10
         presenter.onClickResetButton()
         verify { view.setCount("0") }
+    }
+
+    @Test
+    fun `throw toast 'you already reset' when the counter is at 0 and is pressed the reset button`() {
+        every { view.getCounterInView() } returns 0
+        presenter.onClickResetButton()
+        verify { view.showToastAlreadyResetPressed() }
     }
 
 

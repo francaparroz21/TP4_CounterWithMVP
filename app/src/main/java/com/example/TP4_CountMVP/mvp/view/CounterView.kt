@@ -37,8 +37,21 @@ class CounterView(activity: Activity) : ActivityView(activity), CounterContract.
         return binding.insertText.text.isBlank()
     }
 
+    override fun getCounterInView(): Int {
+        return binding.count.text.toString().toInt()
+    }
+
     override fun showToastErrorEmptyMessage() {
         Toast.makeText(context, activity?.getString(R.string.errorToastMessage), Toast.LENGTH_SHORT)
+            .show()
+    }
+
+    override fun showToastAlreadyResetPressed() {
+        Toast.makeText(
+            context,
+            activity?.getString(R.string.youAlreadyResetCounter),
+            Toast.LENGTH_SHORT
+        )
             .show()
     }
 
