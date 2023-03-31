@@ -3,6 +3,7 @@ package com.example.TP4_CountMVP.mvp.contract
 interface CounterContract {
     interface Model {
         fun getCount(): String
+        fun setCount(acc: Int)
         fun increase(acc: Int)
         fun decrease(acc: Int)
         fun reset()

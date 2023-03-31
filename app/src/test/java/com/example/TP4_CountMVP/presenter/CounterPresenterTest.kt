@@ -1,4 +1,4 @@
-package com.example.TP4_CountMVP
+package com.example.TP4_CountMVP.presenter
 import com.example.TP4_CountMVP.mvp.CounterModel
 import com.example.TP4_CountMVP.mvp.contract.CounterContract
 import com.example.TP4_CountMVP.mvp.presenter.CounterPresenter
